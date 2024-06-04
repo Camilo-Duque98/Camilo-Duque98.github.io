@@ -8,13 +8,11 @@ body {
 
 .layout {
     max-width: 800px;
-    min-width: 480px;
     margin: 0 auto;
 }
 
 
 .container-profile {
-    width: 100%;
     padding-top: 100px;
     display: flex;
 }
@@ -38,7 +36,6 @@ body {
 .navbar {
     display: flex;
     justify-content: flex-end;
-    /* Alinea el menú a la derecha */
     align-items: center;
     padding: 10px 20px;
     position: relative;
