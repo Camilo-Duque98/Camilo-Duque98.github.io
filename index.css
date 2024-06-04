@@ -1,0 +1,149 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2a2a2a;
+    font-family: MontSerrat, Tahoma, Arial, sans-serif;
+    color: #cacaca;
+}
+
+.layout {
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
+
+.container-profile {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+}
+
+.container {
+    padding: 30px;
+}
+
+
+#profile-image-size {
+    width: 18.75rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+#about-1 {
+    margin: 1.875rem;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea el menú a la derecha */
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu a {
+    color: #cacaca;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar-menu a:hover {
+    color: white;
+}
+
+.navbar-toggle {
+    display: none;
+    color: #cacaca;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.back {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #e88282;
+    color: white;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.back:hover {
+    background-color: #d6b0b0;
+    cursor: pointer;
+}
+
+@media (min-width:360px) and (max-width: 768px) {
+    .container {
+        padding: 5px;
+    }
+    .container-profile {
+        display: block;
+    }
+    #profile-image-size {
+        display: flex;
+        max-width: 15.625rem;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #about-1 {
+        margin: 30px;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        background-color: #2a2a2a;
+        z-index: 1;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: none 10s ease;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 0;
+        padding: 0.625rem 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        opacity: 1;
+        max-height: 31.25rem;
+    }
+}
