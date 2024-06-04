@@ -72,8 +72,8 @@ body {
 
 .back {
     position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
+    bottom: 21.875rem;
+    right: 3.125rem;
     background-color: #e88282;
     color: white;
     width: 4.375rem;
@@ -140,23 +140,47 @@ body {
     top: 0;
 }
 
-.overlay p{
+.overlay p {
     text-align: center;
     line-height: 40px;
     margin-top: 2%;
 }
+
 .overlay p a {
     text-decoration: none;
     color: #fff;
 }
 
-@media (max-width: 768px) {
+footer {
+    padding-top: 30px;
+    border-top: 2px dotted #aaaaaa;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+.footer li a {
+    text-decoration: none;
+    color: #cacaca;
+}
+
+@media (max-width: 46.875rem) {
     .container {
         padding: 0.3125rem;
     }
 
-    .container > h2 {
-        margin: 30px;
+    .container>h2 {
+        margin: 1.875rem;
     }
 
     .container-profile {
@@ -179,20 +203,23 @@ body {
     .navbar {
         justify-content: space-between;
     }
+
     .card-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
     }
+
     .card {
         position: relative;
         overflow: hidden;
-        width: 20.625rem;
+        width: 100%;
         height: auto;
         margin: 10px;
         border-radius: 2px;
+        align-items: center;
     }
+
     .navbar-menu {
         display: none;
         flex-direction: column;
@@ -224,9 +251,40 @@ body {
         max-height: 31.25rem;
     }
 
+    #knowledge {
+        text-align: center;
+    }
+
+    #knowledge .container div ul{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    #knowledge .container div ul li .card-container .mini-card{
+        width: 100%;
+    }
+    footer{
+        margin-top: 50px;
+    }
+
+    .footer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .mini-card {
+        width: 90%;
+        padding: 0;
+    }
+
     .back {
         width: 3.125rem;
         height: 3.125rem;
+        right: 10px;
         border-radius: 50%;
+        bottom: 300px;
     }
 }
